@@ -1,0 +1,38 @@
+TSOHA - Johdanto
+Kasper Kivikataja
+
+**********************************************************
+Järjestelmän tarkoitus    				 *
+**********************************************************
+
+Selainpohjainen flashcard-ohjelma jonka avulla voi
+oppia haluamiaan asioita toistoharjoittelulla.
+Ks. http://ankisrs.net/ (Windows/Linux etc, mutta idea sama)
+
+**********************************************************
+Tiivis kuvaus siitä mistä on kyse.			 *
+**********************************************************
+
+Käyttäjä jolla on:
+- Yksi tai useampi "korttipakka"
+- Pakka sisältää kortteja
+- Kortti sisältää kysymys ja -vastauspuolen (mahdollisesti MP3/ja tai kuvia)
+
+***********************************************************
+Millaisen toiminnan tukemiseen järjestelmä on tarkoitettu *
+***********************************************************
+
+Oma oppiminen (esim kielet, sanastot, termien pänttäys etc)
+
+***********************************************************
+Mitkä ovat järjestelmän tavoitteet. 			  *
+***********************************************************
+
+Helpottaa kielen tai muun opiskelua joka vaatii
+pitkäjänteistä opiskelua ja sen toistoa
+
+***********************************************************
+Käytetyt kielet						  *
+***********************************************************
+
+- PHP, PostGRES
