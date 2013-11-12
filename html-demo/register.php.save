@@ -1,0 +1,13 @@
+<html>
+<body>
+
+<p>Register</p>
+<form>
+Username: <input type="text" username="username"><br>
+Password: <input type="password" password="pwd">
+</form>
+
+
+
+</body>
+</body>

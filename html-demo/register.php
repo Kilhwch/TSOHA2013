@@ -3,12 +3,12 @@
 
 <h1>Register</h1>
 
-<form>
+<form action="registerhaku.php" method="POST">
 Username: <input type="text" username="username"><br>
-Password: <input type="password" password="pwd">
+Password: <input type="password" password="password"><br>
+Re-enter: <input type="password" password="password"><br>
+<input type="submit" value="Register">
 </form>
-
-<p>register</p>
 
 </body>
 </html>

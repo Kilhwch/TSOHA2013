@@ -1,0 +1,28 @@
+<html>
+<body>
+
+
+<h1>Login</h1>
+
+<form action="login" method="POST">
+Username: <input type="text" username="username"><br>
+Password: <input type="password" password="password"><br>
+<input type="submit" value="Login">
+</form>
+
+
+$kayttaja = $_POST["username"];
+$salasana = $_POST["password"];
+
+
+if (Kayttaja::getKayttaja($kayttaja, $salasana) != null) {
+   header('location: etusivu.php');
+}
+
+
+
+<a href="register.php">Register</a>
+
+?>
+</body>
+</html>
