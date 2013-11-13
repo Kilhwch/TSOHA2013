@@ -12,8 +12,6 @@ Password: <input type="password" name="password"><br>
 
 <a href="register.php">Register</a>
 
-<p>hello</p>
-
 
 </body>
 </html>

@@ -1,38 +1,29 @@
 <?php
 
+include("connection.php");
+
 class Kayttaja {
-  
-  private $username;
-  private $password;
-  
-  public function __construct($username,$password){
-    $this->username = $username;
-    $this->password = $password;
-  }
-  
-  public function isValid() {
-    include "connection.php";
-    $sql = "SELECT username, password FROM login WHERE username=? AND password=?";
-    $kysely = getTietokanta()->prepare($sql); 
-    $kysely->execute(array($this->username,$this->password));
-    return $kysely->rowCount()==1;
-  }
-  
-  public function getUsername() {
-    return $this->username;
-  }
-  
-  public function getPassword() {
-    return $this->password;
-  }
-  
-  
-  public function addUser() {
-    include "connection.php";
-    $sql = "INSERT INTO login (username, password) VALUES ($this->username, $this->password)";
-    $kysely = getTietokanta()->prepare($sql);
-    $kysely->execute(array($this->username, $this->password));
-  }
+
+    public static function isValid($username, $password) {
+        $sql = "SELECT username, password FROM login WHERE username=? AND password=?";
+        $kysely = getTietokanta()->prepare($sql);
+        $kysely->execute(array($username, $password));
+        return $kysely->rowCount() == 1;
+    }
+
+    public static function addUser($username, $password) {
+        $sql = "INSERT INTO login VALUES(?, ?)";
+        $kysely = getTietokanta()->prepare($sql);
+        $kysely->execute(array($username, $password));
+        echo 'heh';
+    }
+
+    public static function userExists($username) {
+        $sql = "SELECT username FROM login WHERE username='?'";
+        $kysely = getTietokanta()->prepare($sql);
+        $kysely->execute(array($username));
+        return $kysely->rowCount() == 1;
+    }
 }
-  
+
 ?>
