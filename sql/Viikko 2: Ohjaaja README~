@@ -1,5 +1,5 @@
 "Tietokannan käytön aloittaminen" -osiota en ole tehnyt, koska
-login -funktio toimii sivulla.
+login ja register -funktio toimii.
 
 Linkki kirjautumiseen:
 
@@ -7,3 +7,5 @@ http://kkivikat.users.cs.helsinki.fi/login.php
 
 username: csguest
 password: csguest
+
+
