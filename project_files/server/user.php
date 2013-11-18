@@ -23,6 +23,32 @@ class User {
         $kysely->execute(array($username));
         return $kysely->rowCount() == 1;
     }
+
+    public static function loginSafetyCheck($username, $password1, $password2) {
+        var_dump($password1);
+        var_dump(strlen($password1));
+        exit;
+        if ($password1 != $password2) {
+            return false;
+        }
+
+        
+        else if (strlen($password1) < 6 || strlen($password1) > 25) {
+            return false;
+        }
+        
+        else if (!preg_match("#[0-9]+#", $password1)) {
+            return false;
+        }
+
+        else if (strlen($username) < 3 || strlen($username) > 10) {
+            return false;
+        } else {
+            return true;
+            
+        }
+    }
+
 }
 
 ?>
