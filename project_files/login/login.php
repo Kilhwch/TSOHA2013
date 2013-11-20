@@ -10,7 +10,7 @@ Password: <input type="password" name="password"><br>
 </form>
 
 
-<a href="register.php">Register</a>
+<a href="../register/register.php">Register</a>
 
 
 </body>

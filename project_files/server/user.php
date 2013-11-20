@@ -1,6 +1,6 @@
 <?php
 
-include("connection.php");
+include("../server/connection.php");
 
 class User {
 
@@ -25,9 +25,6 @@ class User {
     }
 
     public static function loginSafetyCheck($username, $password1, $password2) {
-        var_dump($password1);
-        var_dump(strlen($password1));
-        exit;
         if ($password1 != $password2) {
             return false;
         }

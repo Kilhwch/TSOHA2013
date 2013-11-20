@@ -1,4 +1,8 @@
 
+<?php 
+    include "../register/session.php";
+    isLogged();
+?>
 
 <html>
     <body>
@@ -15,3 +19,5 @@
         <p>logout</p>
 </html>
 </body>
+                
+                
