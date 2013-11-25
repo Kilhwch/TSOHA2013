@@ -1,4 +1,0 @@
-"Tietokannan käytön aloittaminen" -osiota en ole tehnyt, koska
-login -funktio toimii sivulla. Taulussa on käyttäjä "csguest"
-jonka salasana on "csguest", jolla päästään etusivulle. Muuten
-ohjataan Error.php sivustolle.
