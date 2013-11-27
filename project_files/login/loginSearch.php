@@ -5,9 +5,11 @@ $password = $_POST["password"];
 
 include "../server/user.php";
 
-if (user::isValid($username, $password) === true) {
+$id = User::getValidUserId($username, $password);
+if ($id !== false) {
     session_start();
     $_SESSION["username"] = $username;
+    $_SESSION["id"] = $id;
     header("Location: ../views/index.php");
 } else {
     header("Location: ../views/error.php");
