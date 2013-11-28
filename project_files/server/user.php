@@ -41,10 +41,10 @@ class User {
 
     /* korttien handlerit */
 
-    public static function randomCard() {
-        $sql = "SELECT * FROM cards order by random()";
+    public static function randomCard($deckid) {
+        $sql = "SELECT * FROM cards order by random() WHERE deckid = ?";
         $kysely = getDatabase()->prepare($sql);
-        $kysely->execute();
+        $kysely->execute(array($deckid));
         return $randCard = $kysely->fetchObject();
     }
 
@@ -83,7 +83,7 @@ class User {
     }
 
     public static function deleteDeck($deckid) {
-        $sql = "DELETE FROM decks WHERE deck id = ?";
+        $sql = "DELETE FROM decks WHERE deckid = ?";
         $kysely = getDatabase()->prepare($sql);
         $kysely->execute(array($deckid));
     }

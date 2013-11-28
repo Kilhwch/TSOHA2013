@@ -3,10 +3,9 @@
 include "../server/user.php";
 
 
-$deckid = $_POST["deckid"];
-
-
+$deckid = $_GET["deckid"];
+var_dump($deckid);
 User::deleteDeck($deckid);
-header("Location: ../views/index.php");
+//header("Location: ../views/index.php");
 
 ?>
