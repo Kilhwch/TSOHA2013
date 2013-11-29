@@ -42,16 +42,16 @@ class User {
     /* korttien handlerit */
 
     public static function randomCard($deckid) {
-        $sql = "SELECT * FROM cards order by random() WHERE deckid = ?";
+        $sql = "SELECT * FROM cards WHERE deckid = ? order by random()";
         $kysely = getDatabase()->prepare($sql);
         $kysely->execute(array($deckid));
-        return $randCard = $kysely->fetchObject();
+        return $kysely->fetchObject();
     }
 
-    public static function addCard($front, $back) {
-        $sql = "INSERT INTO cards VALUES(?, ?)";
+    public static function addCard($front, $back, $deckid) {
+        $sql = "INSERT INTO cards VALUES(?, ?, ?)";
         $kysely = getDatabase()->prepare($sql);
-        $kysely->execute(array($front, $back));
+        $kysely->execute(array($front, $back, $deckid));
     }
 
     public static function deleteCard($id) {

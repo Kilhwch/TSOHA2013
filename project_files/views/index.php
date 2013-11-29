@@ -15,14 +15,13 @@ isLogged();
         
         foreach ($decks as $deck):
             ?>
-            <?php 
-            $_POST["deckid"] = $deck->deckid;
             
-            
-            echo "<a href=/views/practice.php>$deck->name</a>"
-            ?>
+        <?php echo "<a href=\"/views/practice.php?deckid={$deck->deckid}\">$deck->name</a>"
+        ?>
         <br>
         <?php endforeach; ?>
+        
+        
 
     </body>
 </html>

@@ -16,7 +16,7 @@ userid integer references login(id)
 CREATE table cards (
 front varchar(40),
 back varchar(40),
+deckid integer,
 id SERIAL,
 PRIMARY KEY(id),
-deckid integer 
 );

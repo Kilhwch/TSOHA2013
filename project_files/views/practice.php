@@ -11,9 +11,7 @@ isLogged();
 
         <?php
         include "../server/user.php";
-
-        $deckid = $_POST["deckid"];
-        var_dump($deckid);
+        $deckid = $_GET['deckid'];
         $card = User::randomCard($deckid);
         echo $card->front;
         ?>
@@ -57,19 +55,17 @@ isLogged();
 
 
 
-
-
-
         <form action="../card/deleteCard.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $card->id ?>">
             <input type="submit" value="Delete Card">
-        </form>
+        </form> 
 
 
-
-
+        
         <form action="../card/addCard.php" method="POST">
-            <input type="hidden" value="<?php echo $card->front, $card->back ?>">
+            <input type="hidden" name="front" value="<?php echo $card->front?>">
+            <input type="hidden" name="back" value="<?php echo $card->back?>">
+            <input type="hidden" name="deckid" value="<?php echo $deckid ?>">
             Front: <input type="text" name="front"><br>
             Back : <input type="text" name="back"><br>
             <input type="submit" value="Add Card">
