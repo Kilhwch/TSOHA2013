@@ -16,7 +16,7 @@ userid integer references login(id)
 CREATE table cards (
 front varchar(40),
 back varchar(40),
-deckid integer,
+deckid integer references decks(deckid) on delete cascade,
 id SERIAL,
-PRIMARY KEY(id),
+PRIMARY KEY(id)
 );

@@ -56,6 +56,7 @@ isLogged();
 
 
         <form action="../card/deleteCard.php" method="POST">
+            <input type="hidden" name="deckid" value="<?php echo $deckid ?>">
             <input type="hidden" name="id" value="<?php echo $card->id ?>">
             <input type="submit" value="Delete Card">
         </form> 

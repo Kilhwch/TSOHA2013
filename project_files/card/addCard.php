@@ -10,5 +10,5 @@ $back = $_POST["back"];
 $deckid = $_POST['deckid'];
 
 User::addCard($front, $back, $deckid);
-header("Location: ../views/index.php");
+header("Location: ../views/practice.php?deckid=$deckid");
 ?>
