@@ -3,7 +3,7 @@
 include "../server/user.php";
 
 
-$name = $_POST["name"];
+$name = $_POST["deckname"];
 $userid = $_POST["userid"];
 
 User::addDeck($name, $userid);

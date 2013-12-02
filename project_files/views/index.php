@@ -7,6 +7,7 @@ isLogged();
 
 
 <html>
+    <link rel="stylesheet" type="text/css" href="../style/main.css">
     <body>
 
         <h3>Decks:</h3>
@@ -23,13 +24,23 @@ isLogged();
             <br>
         <?php endforeach; ?>
 
-        
 
-        <form action="../deck/addDeck.php" method="POST">
-            <input type="submit" value="Add Deck">
+
+        <form action="../deck/addDeck.php" id="addDeck" method="POST">
             <input type="hidden" name="userid" value="<?php echo $_SESSION["id"] ?>">
-            <input type="button" onclick="newDeck()" value="Add Deck">
+            <input type="hidden" name="deckname" id="deckName">
+            <input type="submit" onclick="getDeckName();" value="Add Deck">
         </form>
+
+        <script>
+                function getDeckName() {
+                    var deckname = prompt("Deck Name");
+                    if (deckname) {
+                        document.getElementById("deckName").value = deckname;
+                        document.getElementById("addDeck").submit();
+                    }
+                }
+        </script>
 
     </body>
 </html>

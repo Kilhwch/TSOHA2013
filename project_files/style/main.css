@@ -1,0 +1,18 @@
+/* 
+    Document   : main
+    Created on : 2.12.2013, 13:58:56
+    Author     : kkivikat
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+body {
+    text-align:center;
+}
+#wrapper {
+    margin: 0 auto;
+    width: 500px;
+    text-align:left;
+}

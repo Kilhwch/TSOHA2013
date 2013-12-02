@@ -69,6 +69,7 @@ class User {
 
     /* pakkojen handlerit */
     
+    
     public static function getDecks($id) {
         $sql = "SELECT * FROM decks WHERE userid = ?";
         $kysely = getDatabase()->prepare($sql);
