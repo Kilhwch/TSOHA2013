@@ -31,6 +31,8 @@ isLogged();
             <input type="hidden" name="deckname" id="deckName">
             <input type="submit" onclick="getDeckName();" value="Add Deck">
         </form>
+            
+        <a href="../login/logout.php">Log Out</a>
 
         <script>
                 function getDeckName() {

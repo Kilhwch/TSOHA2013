@@ -1,7 +1,7 @@
 <body>
 <html>
 
-    <p>Oih voih, nyt teit kyllä jotain väärin UUS</p>
+    <p>Oih voih, nyt teit kyllä jotain väärin</p>
 
 </body>
 </html>

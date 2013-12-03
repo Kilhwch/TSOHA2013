@@ -103,6 +103,7 @@ isLogged();
         <script>
             $('#editForms').hide();
             $('#editCard').hide();
+            document.getElementById('hiddenDiv').style.display = 'none';
         </script>
     </body>
 </html>
