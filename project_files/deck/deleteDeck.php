@@ -1,11 +1,8 @@
 <?php
 
-include "../server/user.php";
-
+include "../server/deck.php";
 
 $deckid = $_POST["deckid"];
-
-User::deleteDeck($deckid);
+Deck::deleteDeck($deckid);
 header("Location: ../views/index.php");
-
 ?>

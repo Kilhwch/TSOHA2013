@@ -13,8 +13,8 @@ isLogged();
         <h3>Decks:</h3>
 
         <?php
-        include "../server/user.php";
-        $decks = User::getDecks($_SESSION["id"]);
+        include "../server/deck.php";
+        $decks = Deck::getDecks($_SESSION["id"]);
 
         foreach ($decks as $deck):
             ?>

@@ -35,9 +35,9 @@ isLogged();
         <h2>Front:</h2>
 
         <?php
-        include "../server/user.php";
+        include "../server/card.php";
         $deckid = $_GET['deckid'];
-        $card = User::randomCard($deckid);
+        $card = Card::randomCard($deckid);
 
         echo $card->front;
         ?>

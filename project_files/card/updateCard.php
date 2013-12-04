@@ -1,12 +1,12 @@
 <?php
 
-include "../server/user.php";
+include "../server/card.php";
 
 
 $id = $_POST["id"];
 $front = $_POST["front"];
 $back = $_POST["back"];
 
-User::updateCard($front, $back, $id);
-header("Location: ../views/practice.php?deckid=$deckid");
+Card::updateCard($front, $back, $id);
+header("Location: ../views/practice.php?deckid=$id");
 ?>

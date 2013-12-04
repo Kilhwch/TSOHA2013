@@ -1,10 +1,10 @@
 <?php
 
-include "../server/user.php";
+include "../server/card.php";
 
 $id = $_POST["id"];
 $deckid = $_POST["deckid"];
 
-User::deleteCard($id);
+Card::deleteCard($id);
 header("Location: ../views/practice.php?deckid=$deckid");
 ?>

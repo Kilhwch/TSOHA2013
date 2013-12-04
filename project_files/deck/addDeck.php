@@ -1,11 +1,11 @@
 <?php
 
-include "../server/user.php";
+include "../server/deck.php";
 
 
 $name = $_POST["deckname"];
 $userid = $_POST["userid"];
 
-User::addDeck($name, $userid);
+Deck::addDeck($name, $userid);
 header("Location: ../views/index.php");
 ?>
