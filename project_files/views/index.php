@@ -29,19 +29,23 @@ isLogged();
         <form action="../deck/addDeck.php" id="addDeck" method="POST">
             <input type="hidden" name="userid" value="<?php echo $_SESSION["id"] ?>">
             <input type="hidden" name="deckname" id="deckName">
-            <input type="submit" onclick="getDeckName();" value="Add Deck">
+            <input type="submit" value="Add Deck">
         </form>
             
         <a href="../login/logout.php">Log Out</a>
-
+        <script src="../js/jquery-2.0.3.js"></script>
         <script>
-                function getDeckName() {
-                    var deckname = prompt("Deck Name");
+                $("#addDeck").submit(function(){
+                   var deckname = prompt("Deck Name");
+                   while(deckname.length === 0){
+                       var deckname = prompt("Deck Name");
+                   }
                     if (deckname) {
                         document.getElementById("deckName").value = deckname;
                         document.getElementById("addDeck").submit();
                     }
-                }
+                   return true; 
+                });
         </script>
 
     </body>
